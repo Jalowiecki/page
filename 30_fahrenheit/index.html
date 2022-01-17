@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>30_fahrenheit</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<script>
+			"use strict";
+
+			// Programmiere hier die Funktion calc(number)
+			function calc(celsius) {
+               
+                var fahrenheit;
+                fahrenheit = celsius * (9/5) + 32;
+
+                var ausgabe; 
+                ausgabe = "Die Temperatur von " + celsius + " Grad Celsius entsprichtbder Temperatur von " + fahrenheit + " Grad Fahrenheit.";
+                return ausgabe;
+            }
+			function clicked() {
+				var input = document.getElementById("idInput").value;
+				var output = calc(input);
+				document.getElementById("idOutput").innerHTML = output;
+			}
+
+		</script>
+	</head>
+
+	<body>
+		<h1>fahrenheit</h1>
+		Temperatur in Celsius: <input id="idInput" type="text" value="20">Grad<br /><br />
+		<button onClick="clicked();">Berechne etwas!</button><br /><br />
+		<div id="idOutput">Hier kommt beim Klicken auf den Button eine Ausgabe.</div>
+	</body>
+</html>

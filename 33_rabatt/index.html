@@ -1,0 +1,40 @@
+<html>
+	<head>
+		<title>33 Rabatt</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<script>
+			"use strict";
+
+			// Programmiere hier die Funktion calc(number)
+			function calc(anzahl){
+                var ausgabe;
+                var gesamtpreis;
+
+                gesamtpreis = 399,99 * anzahl;
+
+                ausgabe = "Es wurden " + anzahl + " Laptops verkauft. Der Preis eines Laptops."
+                ausgabe = ausgabe + " Der Kunde muss also insgesamt " + gesamtpreis + " €."
+                
+                return ausgabe;
+            }
+			
+            
+            function clicked() {
+				var input = document.getElementById("idInput").value;
+				var output = calc(input);
+				document.getElementById("idOutput").innerHTML = output;
+			}
+
+		</script>
+	</head>
+
+	<body>
+		<h1>33 Rabatt</h1>
+    <p> Die Infoteam GmbH verkauft Laptops zu einen Preis von 399,99€ pro Stück.
+        <br>
+        Ab 5000,00€ erhält der Kunde 5% Rabatt vom Verkaufspreis.</p>
+		Eingabe: <input id="idInput" type="text" value="10"><br /><br />
+		<button onClick="clicked();">Berechne etwas!</button><br /><br />
+		<div id="idOutput">Hier kommt beim Klicken auf den Button eine Ausgabe.</div>
+	</body>
+</html>
